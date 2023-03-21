@@ -1,0 +1,17 @@
+%btnStyle {
+  background-color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+$tablet: 768px;
+$laptop: 1024px;
+$pc: 1280px;
+
+@mixin responsive($device) {
+  @if $device == "pc" {
+    @media (min-width: $pc) {
+      @content;
+    }
+  }
+}
